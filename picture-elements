@@ -1,0 +1,356 @@
+type: picture-elements
+elements:
+  - type: conditional
+    elements:
+      - type: image
+        hold_action:
+          action: none
+        tap_action:
+          action: none
+        entity: alarm_control_panel.smart_security_panel
+        state_filter:
+          armed_away: >-
+            drop-shadow(1px 1px 10px yellow) drop-shadow(1px 1px 20px yellow)
+            drop-shadow(1px 1px 30px yellow) drop-shadow(1px 1px 35px yellow)
+            drop-shadow(1px 1px 40px yellow);
+        image: /api/image/serve/b6114de7e3cc722b65ee2ff5f6d4705c/512x512
+        style:
+          left: 93%
+          top: 12%
+          width: 7%
+          height: 7%
+    conditions:
+      - condition: state
+        entity: alarm_control_panel.smart_security_panel
+        state: armed_away
+  - type: conditional
+    conditions:
+      - condition: state
+        entity: alarm_control_panel.smart_security_panel
+        state: armed_home
+    elements:
+      - type: image
+        state_filter:
+          armed_home: >-
+            drop-shadow(1px 1px 10px green) drop-shadow(1px 1px 20px green)
+            drop-shadow(1px 1px 30px green) drop-shadow(1px 1px 35px green)
+            drop-shadow(1px 1px 40px green)
+        entity: alarm_control_panel.smart_security_panel
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /api/image/serve/b216e57da689c8ec84a913be898c01ff/512x512
+        style:
+          left: 93%
+          top: 12%
+          width: 7%
+          height: 7%
+  - type: conditional
+    conditions:
+      - condition: state
+        entity: alarm_control_panel.smart_security_panel
+        state: disarmed
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        entity: alarm_control_panel.smart_security_panel
+        state_filter:
+          disarmed: >-
+            drop-shadow(1px 1px 10px red) drop-shadow(1px 1px 20px red) 
+            drop-shadow(1px 1px 30px red) drop-shadow(1px 1px 35px red)
+            drop-shadow(1px 1px 40px red)
+        image: /api/image/serve/12b857c11cf37249c2a09e4b1b398a88/512x512
+        style:
+          left: 93%
+          top: 12%
+          width: 7%
+          height: 7%
+  - type: image
+    image: /api/image/serve/dc1f5d09661549daed08d70c0bb5b500/512x512
+    tap_action:
+      action: none
+    hold_action:
+      action: none
+    state_filter:
+      "0": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "1": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "2": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "3": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "4": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "5": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "6": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "7": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "8": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "9": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "10": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "11": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "12": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "13": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "14": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "15": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "16": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "17": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "18": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "19": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "20": drop-shadow(1px 1px 40px blue) drop-shadow(1px 1px 20px blue)
+      "21": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "22": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "23": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "24": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "25": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "26": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "27": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "28": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "29": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "30": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "31": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "32": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "33": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "34": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "35": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "36": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "37": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "38": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "39": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "40": drop-shadow(1px 1px 40px green) drop-shadow(1px 1px 20px green)
+      "41": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "42": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "43": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "44": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "45": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "46": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "47": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "48": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "49": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "50": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "51": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "52": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "53": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "54": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "55": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "56": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "57": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "58": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "59": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "60": drop-shadow(1px 1px 40px yellow) drop-shadow(1px 1px 20px yellow)
+      "61": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "62": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "63": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "64": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "65": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "66": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "67": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "68": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "69": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "70": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "71": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "72": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "73": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "74": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "75": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "76": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "77": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "78": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "79": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "80": drop-shadow(1px 1px 40px purple) drop-shadow(1px 1px 20px purple)
+      "81": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "82": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "83": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "84": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "85": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "86": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "87": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "88": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "89": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "90": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "91": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "92": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "93": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "94": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "95": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "96": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "97": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "98": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "99": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+      "100": drop-shadow(1px 1px 40px red) drop-shadow(1px 1px 20px red)
+    entity: sensor.desktop_orr9ngs_desktop_orr9ngs_cpuload
+    style:
+      top: 65%
+      left: 49%
+      width: 100%
+      height: 100%
+      zoom: 200%
+  - type: state-label
+    entity: sensor.time
+    tap_action:
+      action: none
+    hold_action:
+      action: none
+    style:
+      color: white
+      font-size: 600%
+      left: 49%
+      top: 8%
+  - type: conditional
+    elements:
+      - type: image
+        image: /api/image/serve/946c3fea093e15fd34ddf4a462d99d27/512x512
+        style:
+          left: 2%
+          top: 11%
+    conditions:
+      - condition: numeric_state
+        entity: sensor.v2208_battery_level
+        below: 35
+        above: 1
+  - type: conditional
+    conditions:
+      - condition: numeric_state
+        entity: sensor.v2208_battery_level
+        below: 101
+        above: 65
+    elements:
+      - type: image
+        image: /api/image/serve/058bcbe876b78dee382cfcb559077952/512x512
+        style:
+          left: 2%
+          top: 11%
+  - type: conditional
+    conditions:
+      - condition: numeric_state
+        entity: sensor.v2208_battery_level
+        below: 66
+        above: 34
+    elements:
+      - type: image
+        image: /api/image/serve/e2c744e5a0791811f80d0f9053bcac7d/512x512
+        style:
+          left: 2%
+          top: 11%
+  - type: conditional
+    elements:
+      - type: image
+        image: /api/image/serve/8f28b0d59b3d6ec0346590b9e2a88d80/512x512
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        style:
+          left: 2%
+          top: 11%
+    conditions:
+      - condition: state
+        entity: binary_sensor.v2208_is_charging
+        state: "on"
+  - type: state-label
+    entity: sensor.v2208_battery_level
+    tap_action:
+      action: none
+    hold_action:
+      action: none
+    style:
+      color: white
+      font-size: 200%
+      left: 2%
+      top: 24%
+  - type: state-label
+    entity: sensor.desktop_orr9ngs_desktop_orr9ngs_cpuload
+    tap_action:
+      action: none
+    hold_action:
+      action: none
+    style:
+      color: BLUE
+      font-size: 350%
+      left: 76%
+      top: 55%
+  - type: state-label
+    entity: alarm_control_panel.smart_security_panel
+    style:
+      color: white
+      font-size: 200%
+      left: 93%
+      top: 2%
+  - type: state-label
+    entity: sensor.desktop_orr9ngs_desktop_orr9ngs_memoryusage
+    tap_action:
+      action: none
+    hold_action:
+      action: none
+    style:
+      color: BLUE
+      font-size: 300%
+      left: 86%
+      top: 55%
+  - type: conditional
+    elements:
+      - type: image
+        image: /api/image/serve/946c3fea093e15fd34ddf4a462d99d27/512x512
+        entity: sensor.p20s_eea_battery_level
+        style:
+          left: 7%
+          top: 11%
+    conditions:
+      - condition: numeric_state
+        entity: sensor.v2208_battery_level
+        below: 35
+        above: 1
+  - type: conditional
+    conditions:
+      - condition: numeric_state
+        entity: sensor.v2208_battery_level
+        below: 101
+        above: 65
+    elements:
+      - type: image
+        image: /api/image/serve/058bcbe876b78dee382cfcb559077952/512x512
+        style:
+          left: 7%
+          top: 11%
+  - type: conditional
+    conditions:
+      - condition: numeric_state
+        entity: sensor.p20s_eea_battery_level
+        below: 66
+        above: 34
+    elements:
+      - type: image
+        image: /api/image/serve/e2c744e5a0791811f80d0f9053bcac7d/512x512
+        style:
+          left: 7%
+          top: 11%
+  - type: conditional
+    elements:
+      - type: image
+        image: /api/image/serve/8f28b0d59b3d6ec0346590b9e2a88d80/512x512
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        style:
+          left: 7%
+          top: 11%
+    conditions:
+      - condition: state
+        entity: binary_sensor.p20s_eea_is_charging
+        state: "on"
+  - type: state-label
+    entity: sensor.p20s_eea_battery_level
+    tap_action:
+      action: none
+    hold_action:
+      action: none
+    style:
+      color: white
+      font-size: 200%
+      left: 7%
+      top: 24%
+image: /api/image/serve/4e4e36e5dfab1f977dba0892934e04a8/512x512
+dark_mode_image: /api/image/serve/712496ea5a2e3f6f8a2ee8debecfd805/512x512
+grid_options:
+  columns: 120
+  rows: 23
